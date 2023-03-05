@@ -1,0 +1,279 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.rectangle{
+    height: 10rem;
+    background-color: rgb(14, 14, 29);    
+}
+.points{
+    border-bottom: 10px dotted white;
+    height: 5.5em;
+    position: relative;
+}
+.jaune{
+    /* border :1px solid white; */
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    border-radius: 50%;
+    top: 2em;
+    animation: deplacement2 5s linear infinite;
+}
+.jaune1{
+    width: 6em;
+    height: 3em;
+    background-color: yellow;
+    margin: 0em auto;
+    border-top-left-radius: 110px; 
+    border-top-right-radius: 110px;
+    border-bottom: 0;
+    animation: jaune1 0.6s infinite;
+    transform-origin: bottom ;
+}
+.jaune2{
+   width: 6em;
+    height: 3em;
+    background-color: yellow;
+    margin: 0em auto;
+    border-bottom-left-radius: 110px; 
+    border-bottom-right-radius: 110px;
+    /* border: 1px solid gray; */
+    border-bottom: 0;
+    transform-origin: top ;
+    animation: jaune2 0.6s infinite;
+}
+@keyframes jaune1 {
+    from{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-20deg);
+    }
+}
+@keyframes jaune2 {
+    for{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+}
+.mauve{
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    border-radius: 50%;
+    top: 2em;
+    left: 7em;
+    background-color: blueviolet;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    display: flex;
+    animation: deplacement2 5s linear infinite,couleur 0.9s infinite;;
+}
+.mauve :nth-child(1){
+    /* margin: 1.5em 1em 0em 0.6em ; */
+    margin: 1.5em 6%;
+    width: 30%;
+    height: 35%;
+    border-radius: 50%;
+    background-color: white; 
+    position: relative;
+}
+.mauve :nth-child(2){
+    /* margin: 1.5em 1.5em 1em 1em; */
+    margin: 1.5em 2%;
+    width: 30%;
+    height: 35%;
+    border-radius: 50%;
+    background-color: white; 
+}
+.mauve :nth-child(1) :nth-child(1),
+.mauve :nth-child(2) :nth-child(1){
+    /* margin: 1.5em 1em 0em 0.6em ; */
+    margin: 1.5em 6%;
+    width: 0.6em;
+    height: 0.7em;
+    border-radius: 50%;
+    background-color: blue; 
+    top: -9px;
+    left: 1px;
+    animation: defil_yeux 0.6s infinite;
+}
+.mauve :nth-child(2) :nth-child(1){
+    background-color: red; 
+    top: -9px;
+    left: 15px;
+    animation: defil_yeux_red 0.6s infinite;
+}
+@keyframes defil_yeux {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(12px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes defil_yeux_red {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-12px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes couleur {
+    0%{
+        background-color: blueviolet;
+    }
+    50%{
+        background-color: blue;
+    }
+    75%{
+        background-color: red;
+    }
+}
+@keyframes deplacement2 {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(115em);
+    }
+}
+
+.emo{
+    margin-top: 5rem;
+    height: 20rem;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.emo1 .yeux,
+.emo2 .yeux,
+.emo3 .yeux{
+    /* border: 1px solid; */
+    height: 8rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+.emo3 .yeux :nth-child(1){
+    background-color: brown;
+}
+.emo1,.emo2,.emo3{
+    height: 15rem;
+    width: 15rem;
+    border: 3px solid orange;
+    margin: 0 5%;
+    border-radius: 50%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #face2e; */
+    box-shadow: 0px -50px 30px rgb(255, 98, 0) inset;
+    background: linear-gradient(rgb(232, 202, 53), rgb(240, 149, 97));
+}
+.emo1 .yeux :nth-child(1),
+.emo2 .yeux :nth-child(1),
+.emo3  .yeux :nth-child(1){
+    height: 4rem;
+    width: 4rem;
+    border: 3px solid grey;
+    background-color: white;
+    margin: 30% 2%;
+    border-radius: 50%;
+}
+.emo1 .yeux :nth-child(2),
+.emo2  .yeux :nth-child(2),
+.emo3 .yeux :nth-child(2){
+    height: 4rem;
+    width: 4rem;
+    border: 3px solid grey;
+    background-color: white;
+    margin: 30% 2%;
+    border-radius: 50%;
+}
+.emo1 .bouche,
+.emo2 .bouche,
+.emo3 .bouche{
+    height: 0.6em;
+    width: 3rem;
+    border: 1px solid;
+    margin-top: 2rem;
+    position: relative;
+    left: 6em;
+    border-radius: 5em;
+    background-color: rgb(178, 47, 47);  
+}
+.emo2 .bouche{
+    height: 3rem;
+    width: 7em;
+    left: 4em;
+    border-bottom-left-radius: 10em;
+    border-bottom-right-radius: 10em;
+    border-top-right-radius:0% ;
+    border-top-left-radius:0% ;
+}
+.emo3 .bouche{
+    height: 2.5rem;
+    width: 6em;
+    left: 4.5em;
+    border-bottom-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+    background-color: transparent;
+    border: 3px solid grey;
+    border-bottom: none;
+}
+
+.emo2 .yeux :nth-child(2) :nth-child(1),
+.emo1 .yeux :nth-child(1) :nth-child(1),
+.emo1 .yeux :nth-child(2) :nth-child(1)
+{
+    height: 1.5em;
+    width: 1.5em;
+    background-color: black;
+    margin: 30% 25%;
+    border-radius: 50%;
+}
+.emo1 .yeux :nth-child(1) :nth-child(1),
+.emo1 .yeux :nth-child(2) :nth-child(1)
+{
+    margin: 0% 26%;
+}
+.emo1 .yeux :nth-child(1) :nth-child(1),
+.emo1 .yeux :nth-child(2) :nth-child(1)
+{
+    animation:rotYeux  1.3s infinite;  
+}
+@keyframes rotYeux {
+    0%{
+        transform: translate(0%,0%);
+    }
+    50%{
+        transform: translate(25%,25%);
+    }
+    75%{
+        transform: translate(10%,60%);
+    }
+}
+.emo2 .yeux :nth-child(1){
+    /* border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%; */
+    border:none ;
+    height: 0.8rem;
+    background-color: brown;
+    margin-top: 6em;
+    border-top-right-radius: 200%;
+    border-top-left-radius: 200%;
+}
